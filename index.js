@@ -82,9 +82,13 @@ document.getElementById('withdrawInput').addEventListener('keyup', function () {
     let btn = document.getElementById('withBtn');
     if (balance < withdraw) {
         btn.setAttribute('disabled', true);
+        document.getElementById('balence').style.border = '1px solid #db3b09';
+        document.getElementById('balence').style.color = '#db3b09';
         alert('Your balance is not enough to withdraw');
     } else {
         btn.removeAttribute('disabled');
+        document.getElementById('balence').style.border = 'none';
+        document.getElementById('balence').style.color = '#000';
     }
 })
 
